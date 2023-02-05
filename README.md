@@ -1,4 +1,4 @@
-# Terminal-assignment
+# Terminal-assignment - Web Shop
 
 Obavezni dio:
 - [x] 1. Tema aplikacije je završni rad.
