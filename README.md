@@ -1,7 +1,7 @@
 # Terminal-assignment
 
 Obavezni dio:
-- [ x ] 1. Tema aplikacije je završni rad.
+- [x] 1. Tema aplikacije je završni rad.
 - [ ] 2. Aplikacija mora imati izbornik na kojem su vidljive sve mogućnosti aplikacije
 - [ ] 3. Jedna stavka izbornika otvara drugi podizbornik s svim njegovim pripadajućim stavkama i opcijom povratka na glavni izbornik
 - [ ] 4. Aplikacija omogućuje CRUD - unos, čitanje, promjenu i brisanje svih podataka unutar Vašeg završnog rada.
