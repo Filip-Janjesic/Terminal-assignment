@@ -1,6 +1,6 @@
 <?php
 
-include_once 'Help.php';
+include_once 'Functions.php';
 
 class Start{
     
@@ -40,7 +40,7 @@ class Start{
     }
 
     private function selectOptionsMainMenu(){
-        switch(Help::numberRange('Chooos an option: ',1,4)){
+        switch(Functions::numberRange('Chooos an option: ',1,4)){
             case 1:
                 $this->userMenu();
                 break;
