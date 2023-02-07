@@ -75,4 +75,7 @@ class Start{
         $this->selectOptionsProduct();
     }
 
+
+    
 }
+new Start($argc,$argv);
