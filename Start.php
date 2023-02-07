@@ -1,39 +1,47 @@
 <?php
 
-include_once 'Pomocno.php';
+include_once 'Help.php';
 
 class Start{
     
-    private $korisnici;
-    private $komentari;
-    private $proizvodi;
-    private $ocjene;
+    private $users;
+    private $comments;
+    private $products;
+    private $grades;
+    private $dev;
 
     public function __construct($argc,$argv){
-        $this->korisnici=[];
-        $this->komentari=[];
-        $this->proizvodi=[];
-        $this->ocjene=[];
+        $this->users=[];
+        $this->comments=[];
+        $this->products=[];
+        $this->grades=[];
         if($argc>1 && $argv[1]=='dev'){
-            $this->testPodaci();
+            //$this->testData();
             $this->dev=true;
         }else{
             $this->dev=false;
         }
-        $this->pozdravnaPoruka();
-        $this->glavniIzbornik();
+        $this->greetingMessage();
+        $this->MainMenu();
     }
 
-    private function pozdravnaPoruka(){
+    private function greetingMessage(){
         echo 'Welcome to Terminal assigment - Web Shop' . PHP_EOL;
     }
 
-    private function glavniIzbornik(){
+    private function MainMenu(){
         echo 'Main menu' . PHP_EOL;
         echo '1. Users' . PHP_EOL;
         echo '2. Products' . PHP_EOL;
         echo '3. Product rating' . PHP_EOL;
         echo '4. Exit the program' . PHP_EOL;
-        $this->odabirOpcijeGlavniIzbornik();
+        $this->selectOptionsMainMenu();
     }
+
+    private function selectOptionsMainMenu(){
+
+    }
+
+
+
 }
