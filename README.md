@@ -17,3 +17,5 @@ Za one UBER napredbe (NOVI GITHUB REPOZITORIJ)
 
 Za Developere (NOVI GITHUB REPOZITORIJ)
 - [ ] 10. Nakon što ste riješili 7. obaveznih točaka + 1 naprednu točku te napravili svih 8 točaka pomoću NetBeans došlo je na red da sve to ponovite koristeći  https://www.jetbrains.com/phpstorm/ (free 30-day trial) 
+
+<!-- C:\Users\Filip\Documents\Edunova-2022\Terminal-assignment> -->
