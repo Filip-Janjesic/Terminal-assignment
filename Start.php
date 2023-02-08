@@ -40,7 +40,7 @@ class Start{
     }
 
     private function selectOptionsMainMenu(){
-        switch(Functions::numberRange('Chooos an option: ',1,4)){
+        switch(Functions::numberRange('Chooos an option: ',1,5)){
             case 1:
                 $this->userMenu();
                 break;
@@ -75,7 +75,54 @@ class Start{
         $this->selectOptionsProduct();
     }
 
+    private function selectOptionsUser(){
+        switch(Functions::numberRange('Chooos an option: ',1,5)){
+            case 1:
+                $this->userOverview();
+                break;
+            case 2:
+                $this->enterNewUser();
+                break;
+            case 3:
+                if(count($this->users)===0){
+                    echo 'No users in the app' . PHP_EOL;
+                    $this->userMenu();
+                }else{
+                    $this->changeUser();
+                }
+                break;
+            case 4:
+                if(count($this->users)===0){
+                    echo 'No users in the app' . PHP_EOL;
+                    $this->userMenu();
+                }else{
+                    $this->deleteUser();
+                }
+                    break;
+            case 5:
+                $this->mainMenu();
+                break;
+            default:
+                $this->userMenu();
+        }
+    }
 
+    private function deleteUser(){
+        $this->userOverview(false);
+        $rb = Functions::numberRange('Choose user: ',1,count($this->users));
+        $rb--;
+        if($this->dev){
+            echo'Before' . PHP_EOL;
+            print_r($this->users);
+        }
+        array_splice($this->users,$rb,1);
+        if($this->dev){
+            echo 'Before' . PHP_EOL;
+            print_r($this->users);
+        }
+        $this->userMenu();
+    }
     
 }
+
 new Start($argc,$argv);
