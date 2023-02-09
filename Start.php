@@ -48,7 +48,7 @@ class Start{
                 $this->productMenu();
                 break;
                 case 5:
-                    echo 'Doviđenja!' . PHP_EOL;
+                    echo 'Farewell!' . PHP_EOL;
                     break;
                 default:
                     $this->mainMenu();
@@ -127,7 +127,7 @@ class Start{
         $this->userOverview(false);
         $rb = Functions::numberRange('Choose user: ',1,count($this->users));
         $rb--;
-        $this->users[$rb]->name = Pomocno::textInput('Insert user name (' .
+        $this->users[$rb]->name = Pomocno::textInput('Insert product name (' .
         $this->users[$rb]->name .'): ',
         $this->users[$rb]->name);
     }
@@ -163,6 +163,23 @@ class Start{
                 $this->productMenu();
         }
     }
+
+    private function deleteProduct(){
+        $this->productOverview(false);
+        $rb = Functions::numberRange('Choose product: ',1,count($this->products));
+        $rb--;
+        if($this->dev){
+            echo'Before' . PHP_EOL;
+            print_r($this->products);
+        }
+        array_splice($this->products,$rb,1);
+        if($this->dev){
+            echo 'Before' . PHP_EOL;
+            print_r($this->products);
+        }
+        $this->productMenu();
+    }
+
 }
 
 new Start($argc,$argv);
