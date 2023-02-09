@@ -150,7 +150,7 @@ class Start{
                 break;
             case 4:
                 if(count($this->users)===0){
-                    echo 'No users in the app' . PHP_EOL;
+                    echo 'No product in the app' . PHP_EOL;
                     $this->productMenu();
                 }else{
                     $this->deleteProduct();

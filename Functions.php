@@ -1,6 +1,6 @@
 <?php
 
-class Pomocno{
+class Functions{
 
     public static function numberRange($message,$min,$max){
         while(true){
