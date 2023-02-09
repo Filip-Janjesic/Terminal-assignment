@@ -132,7 +132,37 @@ class Start{
         $this->users[$rb]->name);
     }
 
-    
+    private function selectOptionsProduct(){
+        switch(Functions::numberRange('Chooos an option: ',1,5)){
+            case 1:
+                $this->productOverview();
+                break;
+            case 2:
+                $this->enterNewProduct();
+                break;
+            case 3:
+                if(count($this->users)===0){
+                    echo 'No product in the app' . PHP_EOL;
+                    $this->productMenu();
+                }else{
+                    $this->changeProduct();
+                }
+                break;
+            case 4:
+                if(count($this->users)===0){
+                    echo 'No users in the app' . PHP_EOL;
+                    $this->productMenu();
+                }else{
+                    $this->deleteProduct();
+                }
+                    break;
+            case 5:
+                $this->mainMenu();
+                break;
+            default:
+                $this->productMenu();
+        }
+    }
 }
 
 new Start($argc,$argv);
