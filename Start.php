@@ -123,6 +123,16 @@ class Start{
         $this->userMenu();
     }
     
+    private function changeUser(){
+        $this->userOverview(false);
+        $rb = Functions::numberRange('Choose user: ',1,count($this->users));
+        $rb--;
+        $this->users[$rb]->name = Pomocno::textInput('Insert user name (' .
+        $this->users[$rb]->name .'): ',
+        $this->users[$rb]->name);
+    }
+
+    
 }
 
 new Start($argc,$argv);
