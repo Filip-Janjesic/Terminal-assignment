@@ -127,7 +127,7 @@ class Start{
         $this->userOverview(false);
         $rb = Functions::numberRange('Choose user: ',1,count($this->users));
         $rb--;
-        $this->users[$rb]->name = Pomocno::textInput('Insert product name (' .
+        $this->users[$rb]->name = Pomocno::textInput('Insert user name (' .
         $this->users[$rb]->name .'): ',
         $this->users[$rb]->name);
     }
@@ -178,6 +178,15 @@ class Start{
             print_r($this->products);
         }
         $this->productMenu();
+    }
+
+    private function changeProduct(){
+        $this->productOverview(false);
+        $rb = Functions::numberRange('Choose user: ',1,count($this->products));
+        $rb--;
+        $this->products[$rb]->name = Pomocno::textInput('Insert product name (' .
+        $this->products[$rb]->name .'): ',
+        $this->products[$rb]->name);
     }
 
 }
