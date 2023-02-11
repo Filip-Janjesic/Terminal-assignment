@@ -189,6 +189,25 @@ class Start{
         $this->products[$rb]->name);
     }
 
+    private function userOverview($showMenu=true){
+        echo '--------------------' . PHP_EOL;
+        echo 'Users in app' . PHP_EOL;
+        $rb=1;
+        foreach($this->users as $v){
+            echo $rb++ . '. ' . $v->name . 
+            ' (' . $v->name . '), ' . count($v->users) 
+            . ' users' . PHP_EOL;
+            $rbp=0;
+            foreach($v->users as $p){
+                echo "\t" . ++$rbp . '. '  . $p->name . ' ' . PHP_EOL;
+            }
+        }
+        echo '--------------------' . PHP_EOL;
+        if($showMenu){
+            $this->userOverview();
+        }   
+    }
+
 }
 
 new Start($argc,$argv);
